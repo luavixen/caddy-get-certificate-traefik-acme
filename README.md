@@ -35,7 +35,8 @@ http:// {
 # Match all HTTPS requests and proxy them to Traefik, but with the right certificates! :D
 https:// {
   tls {
-  	get_certificate http http://localhost:3000/
+    # The magic is here:
+    get_certificate http http://localhost:3000/
   }
   reverse_proxy {
     to https://localhost:7443
