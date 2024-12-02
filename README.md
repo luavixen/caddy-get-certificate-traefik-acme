@@ -9,7 +9,7 @@ Usage is simple:
 docker run \
   -p 3000:3000 \
   -v "/etc/traefik/acme.json:/acme.json" \
-  caddy-get-certificate-traefik-acme:latest
+  luavixen/caddy-get-certificate-traefik-acme:latest
 ```
 You can also source certificates from multiple files:
 ```sh
@@ -17,7 +17,7 @@ docker run \
   -p 3000:3000 \
   -v "/etc/traefik/acme:/acme" \
   -e ACME_STORAGE_PATH=/acme/acme1.json:/acme/acme2.json \
-  caddy-get-certificate-traefik-acme:latest
+  luavixen/caddy-get-certificate-traefik-acme:latest
 ```
 
 I use this with [Dokploy](https://dokploy.com/) as I really like it, but I already use Caddy as my proxy.
