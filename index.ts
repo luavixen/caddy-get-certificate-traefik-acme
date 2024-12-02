@@ -155,3 +155,12 @@ const server = Bun.serve({
 })
 
 console.log(`Listening at ${server.url}`)
+
+process.on('SIGINT', () => {
+  console.log('SIGINT signal received')
+  server.stop()
+})
+process.on('SIGTERM', () => {
+  console.log('SIGTERM signal received')
+  server.stop()
+})
