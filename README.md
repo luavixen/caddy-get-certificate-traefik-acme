@@ -23,7 +23,7 @@ docker run \
 I use this with [Dokploy](https://dokploy.com/) as I really like it, but I already use Caddy as my proxy.
 Since Dokploy runs and manages its own Traefik instance, and routes everything through that, I needed to make Caddy send unmatched requests to Traefik transparently.
 
-So, with Caddy handling ports 80 and 443, Traefik running behind it on 7090 and 7443, and `caddy-get-certificate-traefik-acme` on 3000, my Caddyfile looks something like this:
+So, with Caddy handling ports 80 and 443, Traefik running behind it on 7080 and 7443, and `caddy-get-certificate-traefik-acme` on 3000, my Caddyfile looks something like this:
 ```caddyfile
 # ... a bunch of Caddy-handled sites ...
 
