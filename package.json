@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "type": "module",
   "module": "index.ts",
+  "scripts": {
+    "build": "bun build index.ts --compile --outfile caddy-get-certificate-traefik-acme"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },

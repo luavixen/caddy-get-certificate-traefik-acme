@@ -124,7 +124,7 @@ async function retrieveAllCertificates(): Promise<Certificate[]> {
   return certificates
 }
 
-Bun.serve({
+const server = Bun.serve({
   fetch: async function (this: Server, request: Request): Promise<Response> {
     console.log('Request:', request.method, request.url)
 
@@ -153,3 +153,5 @@ Bun.serve({
     }
   }
 })
+
+console.log(`Listening at ${server.url}`)
