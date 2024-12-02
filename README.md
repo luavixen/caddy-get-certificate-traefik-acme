@@ -1,15 +1,8 @@
 # caddy-get-certificate-traefik-acme
+Server that handles requests from the `http` Caddy TLS certificate manager using certificates from Traefik ACME `acme.json` storage files.
 
-To install dependencies:
+Specifically, this lets Caddy use certificates provided by [Traefik's ACME / Let's Encrypt support](https://doc.traefik.io/traefik/https/acme/) without much hassle.
+This is great if you want to put Traefik behind Caddy and still have Traefik manage all of its own certificates.
 
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.1.36. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## Authors
+Made with ❤ by Lua ([foxgirl.dev](https://foxgirl.dev/))
