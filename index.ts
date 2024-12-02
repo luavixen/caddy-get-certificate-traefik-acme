@@ -6,8 +6,8 @@ console.log('caddy-get-certificate-traefik-acme v0.0.1')
 const storagePaths: string[] = (() => {
   const path = process.env.ACME_STORAGE_PATH
   if (path == null) {
-    console.error('ACME_STORAGE_PATH environment variable not set')
-    process.exit(1)
+    console.warn('ACME_STORAGE_PATH environment variable not set, using default "/acme.json"')
+    return ['/acme.json']
   }
 
   const paths = path.split(':').filter(path => path.length > 0)
